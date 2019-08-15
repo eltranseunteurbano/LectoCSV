@@ -1,23 +1,96 @@
-* {
-  box-sizing: border-box;
-  font-family: 'Helvetica', sans-serif;
+body {
+  padding: 50px;
 }
 
-.container {
+.Table {
+  margin-top: 50px;
+}
+
+.Table__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: red;
+}
+
+.Table__title__text {
+  font-weight: bolder;
+  color: white;
+  text-transform: uppercase;
+  width: 25%;
   text-align: center;
-  padding: 15px;
-  margin: 10px auto;
+  padding: 15px 0;
 }
 
-.csv-input {
-  padding: 10px;
-  display: block;
-  margin: 15px auto;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+.Table__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 0;
 }
 
-.container p {
-  padding-top: 10px;
-  color: #666;
+.Table__item__text {
+  text-align: center;
+  width: 25%;
 }
+
+.Table__item:nth-child(2n+1) {
+  background: #eeeeee;
+}
+
+.Botones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 50px;
+}
+
+.Botones button {
+  background: black;
+  border: none;
+  padding: 10px 15px;
+  color: white;
+  font-weight: bolder;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+/*# sourceMappingURL=App.css.map */

@@ -1,0 +1,68 @@
+
+
+body{
+    padding: 50px;
+}
+
+.Table {
+    margin-top: 50px;
+
+    &__title {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-content: stretch;
+        align-items: center;
+        background: red;
+
+        &__text {
+            font-weight: bolder;
+            color: white;
+            text-transform: uppercase;
+            width: 25%;
+            text-align: center;
+            padding: 15px 0;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-content: stretch;
+        align-items: center;
+        padding: 5px 0;
+
+        &__text {
+            text-align: center;
+            width: 25%;
+        }
+    }
+
+    &__item:nth-child(2n+1) {
+        background: #eeeeee;
+    }
+}
+
+.Botones {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-content: stretch;
+    align-items: center;
+
+    margin-top: 50px;
+
+    button{
+        background: black;
+        border: none;
+        padding: 10px 15px;
+        color: white;
+        font-weight: bolder;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+}
