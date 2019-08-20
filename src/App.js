@@ -3,8 +3,6 @@ import './reset.css';
 import './App.css';
 import CSVReader from 'react-csv-reader'
 
-var datos = [];
-
 export default class App extends React.PureComponent{
 
   constructor(props){
@@ -18,9 +16,7 @@ export default class App extends React.PureComponent{
 
   uploadData = ( data ) => {
     data.shift();
-    datos = data;
     this.setState({data, filterData:data ,uploadedData:true});
-    console.log(this.state.data);
   }
 
   showData = () => {
@@ -31,25 +27,69 @@ export default class App extends React.PureComponent{
     }
   }
 
-  ascendente = () => {
+  ascendenteParticipantes = () => {
     var arreglo = this.state.filterData;
     arreglo = arreglo.sort( function(a, b) { 
       return a[1] > b[1] ? 1 : -1;
     });
     
     this.setState({filterData:arreglo});
-    console.log(this.state.filterData);
+
+    this.forceUpdate();
   }
 
-  descendente = () => {
+  descendenteParticipantes = () => {
     var arreglo = this.state.filterData;
     arreglo = arreglo.sort( function(a, b) { 
       return a[1] < b[1] ? 1 : -1;
     });
     
     this.setState({filterData:arreglo});
-    console.log(this.state.filterData);
+    this.forceUpdate();
   }
+
+  ascendenteA = () => {
+    var arreglo = this.state.filterData;
+    arreglo = arreglo.sort( function(a, b) { 
+      return a[2] > b[2] ? 1 : -1;
+    });
+    
+    this.setState({filterData:arreglo});
+
+    this.forceUpdate();
+  }
+
+  descendenteA = () => {
+    var arreglo = this.state.filterData;
+    arreglo = arreglo.sort( function(a, b) { 
+      return a[2] < b[2] ? 1 : -1;
+    });
+    
+    this.setState({filterData:arreglo});
+    this.forceUpdate();
+  }
+
+  ascendenteB = () => {
+    var arreglo = this.state.filterData;
+    arreglo = arreglo.sort( function(a, b) { 
+      return a[3] > b[3] ? 1 : -1;
+    });
+    
+    this.setState({filterData:arreglo});
+
+    this.forceUpdate();
+  }
+
+  descendenteB = () => {
+    var arreglo = this.state.filterData;
+    arreglo = arreglo.sort( function(a, b) { 
+      return a[3] < b[3] ? 1 : -1;
+    });
+    
+    this.setState({filterData:arreglo});
+    this.forceUpdate();
+  }
+
 
   render(){
     return (
@@ -69,7 +109,7 @@ export default class App extends React.PureComponent{
           </article>
 
           {
-           this.state.filterData ? datos.map( (item) => {
+           this.state.filterData ? this.state.filterData .map( (item) => {
                 return(
                   <article className="Table__item" key={item} >
                     <p className="Table__item__text">{item[0]}</p>
@@ -84,10 +124,27 @@ export default class App extends React.PureComponent{
             }
         </section>
 
-        <article className="Botones">
-          <button onClick={ () => this.ascendente()}>Filtrar participaciones de manera ascendente</button>
-          <button onClick={ () => this.descendente()}>Filtrar participaciones de manera descendente</button>
-        </article>
+        <section className="Ui-botones">
+          <article className="Botones">
+            <h1>PARTICIPACIONES</h1>
+            <button onClick={ () => this.descendenteParticipantes()}>ascendente</button>
+            <button onClick={ () => this.ascendenteParticipantes()}>descendente</button>
+          </article>
+
+          <article className="Botones">
+            <h1>DATOS A</h1>
+            <button onClick={ () => this.descendenteA()}>ascendente</button>
+            <button onClick={ () => this.ascendenteA()}>descendente</button>
+          </article>
+
+          <article className="Botones">
+            <h1>DATOS B</h1>
+            <button onClick={ () => this.descendenteB()}>ascendente</button>
+            <button onClick={ () => this.ascendenteB()}>descendente</button>
+          </article>
+        </section>
+
+        
 
 
         {//<button>Cargar archivo nuevamente</button> 

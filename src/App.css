@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
 body {
   padding: 50px;
 }
@@ -33,6 +34,7 @@ body {
   width: 25%;
   text-align: center;
   padding: 15px 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 .Table__item {
@@ -58,13 +60,14 @@ body {
 .Table__item__text {
   text-align: center;
   width: 25%;
+  font-family: 'Roboto', sans-serif;
 }
 
 .Table__item:nth-child(2n+1) {
   background: #eeeeee;
 }
 
-.Botones {
+.Ui-botones {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -81,16 +84,46 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.Ui-botones .Botones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 50px;
 }
 
-.Botones button {
-  background: black;
+.Ui-botones .Botones button {
+  background: #202020;
   border: none;
   padding: 10px 15px;
   color: white;
   font-weight: bolder;
   text-transform: uppercase;
   cursor: pointer;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+  opacity: .5;
+  margin: 10px 0;
+  width: 250px;
+}
+
+.Ui-botones .Botones button:hover {
+  background: #202020;
+  opacity: 1;
 }
 /*# sourceMappingURL=App.css.map */

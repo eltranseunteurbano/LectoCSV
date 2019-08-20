@@ -1,4 +1,5 @@
 
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
 
 body{
     padding: 50px;
@@ -23,6 +24,8 @@ body{
             width: 25%;
             text-align: center;
             padding: 15px 0;
+            font-family: 'Roboto', sans-serif;
+
         }
     }
 
@@ -38,6 +41,8 @@ body{
         &__text {
             text-align: center;
             width: 25%;
+            font-family: 'Roboto', sans-serif;
+
         }
     }
 
@@ -45,8 +50,7 @@ body{
         background: #eeeeee;
     }
 }
-
-.Botones {
+.Ui-botones{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -54,15 +58,34 @@ body{
     align-content: stretch;
     align-items: center;
 
+
+.Botones {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: center;
+
     margin-top: 50px;
 
     button{
-        background: black;
+        background: rgb(32, 32, 32);
         border: none;
         padding: 10px 15px;
         color: white;
         font-weight: bolder;
         text-transform: uppercase;
         cursor: pointer;
+        transition: all .4s;
+        opacity: .5;
+        margin: 10px 0;
+        width: 250px;
     }
+
+    button:hover{
+        background: rgb(32, 32, 32);
+        opacity: 1;
+    }
+}
 }
